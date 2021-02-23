@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RouteServerApplication {
+public class ScgApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(RouteServerApplication.class, args);
+        SpringApplication.run(ScgApplication.class, args);
     }
 }
 
