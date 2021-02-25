@@ -1,15 +1,27 @@
-#spring:
-#  datasource:
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-#    url: jdbc:mysql://rm-bp1nnjhvq3tra324d.mysql.rds.aliyuncs.com:3306/mini_app_db?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&serverTimezone=GMT%2B8
-#    username: root
-#    password: v7#ROHq7JmKD
 spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://rm-bp1nnjhvq3tra324d.mysql.rds.aliyuncs.com:3306/mini_app_db?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&serverTimezone=GMT%2B8
+    username: root
+    password: v7#ROHq7JmKD
+
   cloud:
     gateway:
-      routes:
-        - id: custom_add_request_header_route
-          uri: http://localhost:9091
-          predicates:
-            - Host=localhost:9090
+      httpserver:
+        wiretap: true
+      httpclient:
+        wiretap: true
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: gateway
+
+logging:
+  level:
+    org.springframework.cloud.gateway: trace
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true

@@ -18,22 +18,22 @@ public class MyRoute {
     private String path;
 
     /**
-     * 服务id
+     * dubbo接口
      */
-    private String service;
+    private String dubboInterface;
 
     /**
-     * 服务版本号
+     * dubbo版本号
      */
-    private String version;
+    private String dubboVersion;
+
+    /**
+     * dubbo方法
+     */
+    private String dubboMethod;
 
     /**
      * 转发地址
      */
     private String uri;
-
-    /**
-     *
-     */
-    private Integer priority;
 }
