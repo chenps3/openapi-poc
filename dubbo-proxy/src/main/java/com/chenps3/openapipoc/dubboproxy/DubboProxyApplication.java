@@ -23,23 +23,11 @@ public class DubboProxyApplication {
 
     @GetMapping("/http/test/v1")
     public Object test001(HttpServletRequest httpServletRequest) {
-        Enumeration<String> headerNames = httpServletRequest.getHeaderNames();
-        while (headerNames.hasMoreElements()) {
-            String headerName = headerNames.nextElement();
-            String headerValue = httpServletRequest.getHeader(headerName);
-            System.out.println("header " + headerName + ":" + headerValue);
-        }
         return "helloV1";
     }
 
     @GetMapping("/http/test/v2")
     public Object test002(HttpServletRequest httpServletRequest) {
-        Enumeration<String> headerNames = httpServletRequest.getHeaderNames();
-        while (headerNames.hasMoreElements()) {
-            String headerName = headerNames.nextElement();
-            String headerValue = httpServletRequest.getHeader(headerName);
-            System.out.println("header " + headerName + ":" + headerValue);
-        }
         return "helloV2";
     }
 

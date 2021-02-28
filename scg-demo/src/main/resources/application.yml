@@ -1,9 +1,11 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://rm-bp1nnjhvq3tra324d.mysql.rds.aliyuncs.com:3306/mini_app_db?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&serverTimezone=GMT%2B8
-    username: root
-    password: v7#ROHq7JmKD
+    url: jdbc:mysql://localhost:3306/openapi?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&serverTimezone=GMT%2B8
+#    url: jdbc:mysql://rm-bp1nnjhvq3tra324d.mysql.rds.aliyuncs.com:3306/mini_app_db?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&serverTimezone=GMT%2B8
+  username: root
+#    password: v7#ROHq7JmKD
+    password: 123456
 
   cloud:
     gateway:
